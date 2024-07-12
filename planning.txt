@@ -1,0 +1,100 @@
+1. Auth API
+
+POST /signup: Register a new user.
+POST /login: Authenticate a user and generate a token.
+POST /logout: Log out a user and invalidate the token.
+POST /reset-password: Send a password reset link.
+PUT /reset-password/
+: Reset the password using the token.
+
+2. Profile API
+GET /profile: Get the logged-in user's profile.
+PUT /profile: Update the logged-in user's profile.
+GET /users/
+: Get a specific user's profile (admin/staff only).
+
+3. Calendar API
+GET /availability: Get available time slots for appointments.
+POST /availability: Set availability for staff (admin/staff only).
+
+4. Appointment API
+GET /appointments: Get a list of appointments for the logged-in user.
+POST /appointments: Book a new appointment.
+PUT /appointments/
+: Reschedule an appointment.
+DELETE /appointments/
+: Cancel an appointment.
+GET /appointments/
+: Get details of a specific appointment.
+
+5. Notification API
+POST /notifications: Send a notification (email/SMS).
+GET /notifications: Get a list of notifications sent to the logged-in user.
+
+6. Patient API
+GET /patients: Get a list of all patients (admin/staff only).
+POST /patients: Add a new patient (admin/staff only).
+GET /patients/
+: Get details of a specific patient (admin/staff only).
+PUT /patients/
+: Update patient details (admin/staff only).
+DELETE /patients/
+: Delete a patient record (admin only).
+
+7. Dental Chart API
+GET /patients/
+/dental-chart: Get the dental chart for a specific patient (admin/staff only).
+PUT /patients/
+/dental-chart: Update the dental chart for a specific patient (admin/staff only).
+
+8. Billing API
+GET /bills: Get a list of all bills for the logged-in user.
+POST /bills: Create a new bill (admin/staff only).
+GET /bills/
+: Get details of a specific bill.
+PUT /bills/
+: Update a bill (admin/staff only).
+DELETE /bills/
+: Delete a bill (admin only).
+
+9. Payment Gateway API
+POST /payments: Process a payment.
+GET /payments: Get a list of payments made by the logged-in user.
+GET /payments/
+: Get details of a specific payment.
+
+10. Inventory API
+GET /inventory: Get a list of inventory items (admin/staff only).
+POST /inventory: Add a new inventory item (admin/staff only).
+PUT /inventory/
+: Update an inventory item (admin/staff only).
+DELETE /inventory/
+: Delete an inventory item (admin only).
+
+11. Alert API
+POST /alerts: Create a new alert (admin/staff only).
+GET /alerts: Get a list of alerts for the logged-in user.
+
+12. Video Call API (if implementing telemedicine)
+POST /video-calls: Schedule a video call.
+GET /video-calls: Get a list of video calls for the logged-in user.
+GET /video-calls/
+: Get details of a specific video call.
+
+13. Prescription API (if implementing telemedicine)
+GET /prescriptions: Get a list of prescriptions for the logged-in user.
+POST /prescriptions: Create a new prescription (admin/staff only).
+GET /prescriptions/
+: Get details of a specific prescription.
+PUT /prescriptions/
+: Update a prescription (admin/staff only).
+
+14. Email/SMS API
+POST /email: Send an email notification.
+POST /sms: Send an SMS notification.
+
+15. Messaging API
+GET /messages: Get a list of messages for the logged-in user.
+POST /messages: Send a new message.
+GET /messages/
+: Get details of a specific message. 
